@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rahul R Parmar - Supply Chain & Logistics Professional Portfolio">
+    <meta name="keywords" content="logistics, supply chain, warehouse management, material planning, dispatch">
+    <meta property="og:title" content="Rahul R Parmar - Portfolio">
+    <meta property="og:description" content="Professional portfolio of Rahul R Parmar, an experienced Supply Chain & Logistics specialist">
+    <meta property="og:type" content="website">
+    <title>Rahul R Parmar - Supply Chain & Logistics Professional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f59e0b;
+            --light-color: #f8fafc;
+            --dark-color: #1e293b;
+            --text-color: #334155;
+            --bg-color: #ffffff;
+            --card-bg: #f1f5f9;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .dark-mode {
+            --primary-color: #3b82f6;
+            --secondary-color: #60a5fa;
+            --accent-color: #f59e0b;
+            --light-color: #1e293b;
+            --dark-color: #f8fafc;
+            --text-color: #e2e8f0;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: all 0.3s ease;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        /* Header styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled {
+            padding: 0.8rem 0;
+            background-color: var(--bg-color);
+            box-shadow: var(--shadow);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            margin-left: 2rem;
+            background: none;
+            border: none;
+            color: var(--dark-color);
+            font-size: 1.2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-color);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(135deg, var(--primary-color) 0%, transparent 80%);
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-greeting {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .hero-name {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.6s;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 2rem;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 1.2s;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* About section */
+        .about {
+            background-color: var(--bg-color);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-info {
+            flex: 1;
+        }
+
+        .about-text {
+            margin-bottom: 2rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-title {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Experience section */
+        .experience {
+            background-color: var(--light-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            background-color: inherit;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--card-bg);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--card-bg) transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-duties {
+            margin-bottom: 1rem;
+        }
+
+        .timeline-duties li {
+            margin-bottom: 0.5rem;
+            list-style-type: circle;
+            margin-left: 1.5rem;
+        }
+
+        .timeline-achievements {
+            margin-top: 1rem;
+        }
+
+        .timeline-achievements h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .timeline-achievements li {
+            margin-bottom: 0.5rem;
+            list-style-type: square;
+            margin-left: 1.5rem;
+        }
+
+        /* Skills section */
+        .skills {
+            background-color: var(--bg-color);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+
+        .skill-category-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            position: relative;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 500;
+        }
+
+        .skill-level {
+            color: var(--accent-color);
+        }
+
+        .skill-bar {
+            height: 10px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        .tech-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-skill {
+            padding: 0.5rem 1rem;
+            background-color: var(--card-bg);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-skill:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Education section */
+        .education {
+            background-color: var(--light-color);
+        }
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-degree {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .education-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .education-year {
+            color: var(--accent-color);
+        }
+
+        .education-grade {
+            font-weight: 500;
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: var(--bg-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            border-radius: 50%;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-btn {
+            width: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--light-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Media queries */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-name {
+                font-size: 3rem;
+            }
+
+            .hero-title {
+                font-size: 1.3rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-color);
+                box-shadow: var(--shadow);
+                padding: 2rem;
+                z-index: 1;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--card-bg) transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.1rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">Rahul Parmar</a>
+                <ul class="nav-list" id="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h4 class="hero-greeting">Hello, I'm</h4>
+                <h1 class="hero-name">Rahul R Parmar</h1>
+                <h3 class="hero-title">Supply Chain & Logistics Professional</h3>
+                <p class="hero-text">
+                    A skilled professional with over 11+ years of extensive experience in logistics, warehouse management, 
+                    supply chain operations, and material planning. Specialized in handling greenfield projects, new model 
+                    launches, and optimizing inventory management processes.
+                </p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href=".\Rahul CV.docx" class="btn btn-outline" download>Download CV</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- <img src="/api/placeholder/400/500"  class="about-img"> -->
+                    <!-- <img src="/api/placeholder/400/500" alt="Rahul Parmar" class="about-img"> -->
+                </div>
+                <div class="about-info">
+                    <p class="about-text">
+                        I am a young, energetic, and result-oriented Bachelor of Engineering (Mechanical) professional with a strong academic background. 
+                        As a persuasive communicator with exceptional relationship management skills, I have the ability to relate to people at any level 
+                        of business and management. I am highly ethical, trustworthy, and discreet.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans across Supply Chain Management, Warehouse Operations, Logistics, Material Planning, Inventory Control, 
+                        and People Management. I have successfully managed greenfield projects, new model launches, and implemented process improvements 
+                        that significantly enhanced operational efficiency.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number" id="expYears">11+</h3>
+                            <p class="stat-title">Years of Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" id="projectsCompleted">50+</h3>
+                            <p class="stat-title">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- Kalpataru projects -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2025 - Present</div>
+                        <h3 class="timeline-title">Manager, Material Planning & Billing</h3>
+                        <h4 class="timeline-company">Kalpataru Projects International Limited</h4>
+                        <ul class="timeline-duties">
+                            <li>Coordinating the billing process for materials delivered to the row yard</li>
+                            <li>Developing and maintaining comprehensive material inventory systems</li>
+                            <li>Implementing stock rotation practices (FIFO/LIFO) to prevent material wastage</li>
+                            <li>Conducting cost analysis to identify opportunities for material savings</li>
+                            <li>Overseeing dispatch of materials to various project sites</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Tata Motors -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2023 - December 2024</div>
+                        <h3 class="timeline-title">Senior Executive, FGS, Billing & Dispatch</h3>
+                        <h4 class="timeline-company">Tata Motors Ltd. (TML Business Services Ltd.)</h4>
+                        <ul class="timeline-duties">
+                            <li>Trained and led a team of 90+ subordinates for FGS, Billing & Dispatch activities</li>
+                            <li>Managed billing processes ensuring accuracy and timeliness of invoices</li>
+                            <li>Coordinated daily dispatch operations for a fleet of delivery vehicles</li>
+                            <li>Implemented strategic changes in the FGS, maximizing space utility</li>
+                        </ul>
+                        <div class="timeline-achievements">
+                            <h4>Achievements:</h4>
+                            <ul>
+                                <li>Successfully completed Advance MS Excel training from Tata Motors Academy</li>
+                                <li>Completed Daily Work Management modules and Corporate Communications Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MG Motor -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2022 - December 2023</div>
+                        <h3 class="timeline-title">Engineer, Supply Chain Management</h3>
+                        <h4 class="timeline-company">MG Motor India Pvt Ltd.</h4>
+                        <ul class="timeline-duties">
+                            <li>Led a team of 90 subordinates for Logistics, Warehouse, and Supply Chain Management</li>
+                            <li>Managed warehouse operations for various product lines: Hector, EV & Astor</li>
+                            <li>Handled internal and external warehouses for material receipt, storage and movement</li>
+                            <li>Ensured zero-line stoppages and monitoring of bottleneck parts per production plan</li>
+                        </ul>
+                        <div class="timeline-achievements">
+                            <h4>Achievements:</h4>
+                            <ul>
+                                <li>New model material shifting in 3 days with system updating & physical labeling</li>
+                                <li>Successfully implemented E-KANABAN of Materials pull system</li>
+                                <li>30% 3PL Manpower reduction for operational cost saving</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Harsha Engineers -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2018 - May 2022</div>
+                        <h3 class="timeline-title">Senior Logistics Officer</h3>
+                        <h4 class="timeline-company">Harsha Engineers International Limited</h4>
+                        <ul class="timeline-duties">
+                            <li>Managed FGS operations including receiving material from production and dispatch</li>
+                            <li>Ensured dispatches as per planning with correct Post goods issue (PGI)</li>
+                            <li>Maintained FG store with FIFO & 5S standards and statutory compliance</li>
+                            <li>Conducted monthly physical stock verification with SAP system</li>
+                        </ul>
+                        <div class="timeline-achievements">
+                            <h4>Achievements:</h4>
+                            <ul>
+                                <li>No customer complaints and no delay in dispatches</li>
+                                <li>Successfully implemented SAP system for smoother operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Previous Experience - Collapsible -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2014 - 2018</div>
+                        <h3 class="timeline-title">Previous Experience</h3>
+                        <h4 class="timeline-company">TVS Logistics & Ford India Private Limited</h4>
+                        <p>Managed logistics operations, line feeding, receiving teams, and warehouse processes. Ensured on-time material feeding to production lines and inventory control.</p>
+                        <button class="btn btn-outline" id="showMoreExp" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1rem;">Show Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Core Competencies</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Supply Chain Management</span>
+                                    <span class="skill-level">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Warehouse Management</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Inventory Management</span>
+                                    <span class="skill-level">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Material Planning</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Logistics Operations</span>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Technical Skills</h3>
+                        <div class="tech-skills">
+                            <span class="tech-skill">SAP-MM & SD Module</span>
+                            <span class="tech-skill">Advanced Excel</span>
+                            <span class="tech-skill">Six Sigma Yellow Belt</span>
+                            <span class="tech-skill">(Comman Material Management System)CMMS-3</span>
+                            <span class="tech-skill">(Warehouse Management System)WMS</span>
+                            <span class="tech-skill">(Logistics Execution System)LES</span>
+                            <span class="tech-skill">(Manufacturing Execution System)MES</span>
+                            <span class="tech-skill">QAD</span>
+                            <span class="tech-skill">AutoCAD (Basic)</span>
+                            <span class="tech-skill">Invoicing</span>
+                            <span class="tech-skill">Billing</span>
+                            <span class="tech-skill">Financial Reporting</span>
+                            <span class="tech-skill">Dispatch Operations</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" style="margin-top: 2rem;">
+                        <h3 class="skill-category-title">Languages</h3>
+                        <div class="tech-skills">
+                            <span class="tech-skill">English</span>
+                            <span class="tech-skill">Hindi</span>
+                            <span class="tech-skill">Gujarati</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3 class="education-degree">BE Mechanical</h3>
+                    <p class="education-school">Dr. APJ Abdul Kalam University</p>
+                    <div class="education-details">
+                        <span class="education-year">2023</span>
+                        <span class="education-grade">7.03 CGPA</span>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-degree">Diploma (Automobile)</h3>
+                    <p class="education-school">Shree N.M Gopani PolyTechnic</p>
+                    <div class="education-details">
+                        <span class="education-year">2013</span>
+                        <span class="education-grade">7.90 CGPA</span>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-degree">S.S.C</h3>
+                    <p class="education-school">The Birla & Harjivandas High School</p>
+                    <div class="education-details">
+                        <span class="education-year">2010</span>
+                        <span class="education-grade">60.92%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 9974570010 / +91 8200405330</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>parmarrahul2028@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p><span>247 Patel Vadi Behind, Railway Station,Plot Area,</span><br>
+                            <span>Ta-Dhandhuka, District-Ahmedabad,</span>
+                            <span>Gujarat, India</span></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="linkedin.com/in/rahul-parmar-707505110"><p>Rahul Parmar</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="about-image">
+                        <img src=".\contact-us.jpg" alt="Contact us" class="about-img" style="box-shadow: none;">
+                    </div>
+                </div>
+                <!-- <div class="contact-form" style="display: none;">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-btn">Send Message</button>
+                    </form>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Rahul R Parmar</div>
+            <p class="footer-text">Supply Chain & Logistics Professional with a passion for optimizing processes and driving operational excellence.</p>
+            <div class="footer-social">
+                <a href="#" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">© 2025 Rahul R Parmar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle navigation menu
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Header scroll class
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Skill bar animation
+        const skillSection = document.querySelector('.skills');
+        const skillBars = document.querySelectorAll('.skill-progress');
+
+        function animateSkillBars() {
+            skillBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                bar.style.width = progress + '%';
+            });
+        }
+
+        const skillSectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    skillSectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        skillSectionObserver.observe(skillSection);
+
+        // Statistics counter animation
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => {
+                        const updateCount = () => {
+                            const target = parseInt(counter.getAttribute('id') === 'expYears' ? '11' : '50');
+                            const count = parseInt(counter.innerText);
+                            const increment = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment) + '+';
+                                setTimeout(updateCount, 10);
+                            } else {
+                                counter.innerText = target + '+';
+                            }
+                        };
+
+                        updateCount();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const aboutStats = document.querySelector('.about-stats');
+        if (aboutStats) {
+            counterObserver.observe(aboutStats);
+        }
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // Here you would normally send the form data to a server
+                alert('Message sent successfully! I will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill all the fields');
+            }
+        });
+
+        // Previous experience show more
+        const showMoreExpBtn = document.getElementById('showMoreExp');
+        showMoreExpBtn.addEventListener('click', () => {
+            const moreContent = `
+                <div class="timeline-date">March 2016 - March 2018</div>
+                <h3 class="timeline-title">Engineer (Process Coach)</h3>
+                <h4 class="timeline-company">TVS LOGISTIC SERVICE LTD. (Ford India)</h4>
+                <ul class="timeline-duties">
+                    <li>Led receiving & warehouse team of 30 employees</li>
+                    <li>Ensured material feeding to production line on time</li>
+                    <li>Coordinated with purchase and production departments</li>
+                </ul>
+                <div class="timeline-date" style="margin-top: 1rem;">August 2014 - February 2016</div>
+                <h3 class="timeline-title">Assistant Engineer (Team Leader)</h3>
+                <h4 class="timeline-company">FORD INDIA PRIVATE LIMITED</h4>
+                <ul class="timeline-duties">
+                    <li>Led line feeding team of 25 employees</li>
+                    <li>Monitored high value parts inventory status</li>
+                    <li>Participated in new model launches</li>
+                </ul>
+            `;
+            
+            showMoreExpBtn.parentNode.innerHTML = moreContent;
+        });
+
+        // Download CV
+        document.getElementById('downloadCV').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('CV download initiated. This would download the actual PDF in a live implementation.');
+        });
+    </script>
+</body>
+</html>
